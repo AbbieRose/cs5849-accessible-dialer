@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>Phone App</title>
+        <link rel="stylesheet" href="phone.css">
+    </head>
+    <body>
+        <div id="tab_bar" role="navigation">
+            <button class="tab_button" id="dialer" accesskey="p">Dialer</button>
+            <button class="tab_button" id="contact_list" accesskey="l">Contact List</button>
+            <button class="tab_button" id="add_contact" accesskey="+">Add Contact</button>
+            <button class="tab_button" id="help" accesskey="h">Help</button>
+        </div>
+        <div id="content" role="main">
+            <div id="dialer_content" align="center">
+                <h2 style="color:navy;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Dialer</h2>
+                <br>
+                <div aria-live="polite">
+                    <form>
+                        <input id="number_dialed" type="text" name="number" readonly>
+                    </form>
+                </div>
+                <br>
+                <div class="container" id="phone_pad">
+                    <button class="grid-item" id ="one" accesskey="1">1</button>
+                    <button class="grid-item" id ="two" accesskey="2">2</button>
+                    <button class="grid-item" id ="three" accesskey="3">3</button>
+                    <button class="grid-item" id ="four" accesskey="4">4</button>
+                    <button class="grid-item" id ="five" accesskey="5">5</button>
+                    <button class="grid-item" id ="six" accesskey="6">6</button>
+                    <button class="grid-item" id ="seven" accesskey="7">7</button>
+                    <button class="grid-item" id ="eight" accesskey="8">8</button>
+                    <button class="grid-item" id ="nine" accesskey="9">9</button>
+                    <button class="grid-item" id ="star" accesskey="*">*</button>
+                    <button class="grid-item" id ="zero" accesskey="0">0</button>
+                    <button class="grid-item" id ="pound" accesskey="#">#</button>
+                    <button class="action-button" id="dial" accesskey="d">Dial</button>
+                    <button class="action-button" id="clear" accesskey="c">Clear</button>
+                </div>
+            </div>
+            <div id="contact_content" align="center">
+                <h2 style="color:navy;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Contacts List</h2>
+                <table id="contacts_list">
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email Address</th>
+                    </tr>
+                    <tr>
+                        <th>Hugo Lloris</th>
+                        <td>[redacted]</td>
+                        <td>captain@spurs.com</td>
+                    </tr>
+                    <tr>
+                        <th>Kieran Trippier</th>
+                        <td>[redacted]</td>
+                        <td>freekicks@spurs.com</td>
+                    </tr>
+                    <tr>
+                        <th>Toby Alderweireld</th>
+                        <td>[redacted]</td>
+                        <td>goalline.bandit@spurs.com</td>
+                    </tr>
+                        <th>Jan Vertonghen</th>
+                        <td>[redacted]</td>
+                        <td>superjan@spurs.com</td>
+                    </tr>
+                    <tr>
+                        <th>Ben Davies</th>
+                        <td>[redacted]</td>
+                        <td>smart@spurs.com</td>
+                    </tr>
+                    <tr>
+                        <th>Eric Dier</th>
+                        <td>[redacted]</td>
+                        <td>destroyer@spurs.com</td>
+                    </tr>
+                    <tr>
+                        <th>Mousa Sissoko</th>
+                        <td>[redacted]</td>
+                        <td>goat@spurs.com</td>
+                    </tr>
+                        <th>Harry Winks</th>
+                        <td>[redacted]</td>
+                        <td>winksy@spurs.com</td>
+                    </tr>
+                    <tr>
+                        <th>Christian Eriksen</th>
+                        <td>[redacted]</td>
+                        <td>greatdane@spurs.com</td>
+                    </tr>
+                    <tr>
+                        <th>Dele Alli</th>
+                        <td>[redacted]</td>
+                        <td>dele@spurs.com</td>
+                    </tr>
+                    <tr>
+                        <th>Son Heung-Min</th>
+                        <td>[redacted]</td>
+                        <td>beekeeper@spurs.com</td>
+                    </tr>
+                    <tr>
+                        <th>Harry Kane</th>
+                        <td>[redacted]</td>
+                        <td>hurricane@spurs.com</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="add_content" align="center">
+                <h2 align="center" style="color:navy;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Add Contact</h2>
+                <div aria-live="polite">
+                    <form class="add_form">
+                        <label for="name">Name</label><br>
+                        <input id="name" name="name" placeholder="Mauricio Pochettino"><br>
+                        <br>
+                        <label for="number">Phone Number</label><br>
+                        <input id="number" name="number" placeholder="123-456-7890"><br>
+                        <br>
+                        <label for="email">Email address</label><br>
+                        <input id="email" name="email" placeholder="poch@spurs.com"><br>
+                    </form>
+                </div>
+                
+                <div id="buttons">
+                    <button class="add-action-button" id="add" accesskey="a">Add</button>
+                    <button class="add-action-button" id="clear-contact" accesskey="c">Clear</button>
+                </div>
+                <br>
+                <img src="spurs-blue-no-text-300x300.png" alt="The spurs logo- a rooster standing on a ball" height="75" width="75">
+            </div>
+        </div>
+        <div id="help_content">
+            <h2 align="center" style="color:navy;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Help</h2>
+            <h4>Accessibility Features</h4>
+            <ul>
+                <li>Tabbing</li>
+                <li>Keyboard Shortcuts</li>
+                <li>Image Alt Text</li>
+                <li>Accessible Table</li>
+                <li>ARIA Landmark Roles</li>
+            </ul>
+            <h4>Keyboard Shortcuts</h4>
+            <ul>
+                <li>Dialer: p</li>
+                <li>Contacts List: l</li>
+                <li>Add Contact Tab: +</li>
+                <li>Help Tab: h</li>
+                <li>Use numbers to dial phone, i.e. "1" dials 1</li>
+                <li>Add button: a</li>
+                <li>Clear button(s): c</li>
+            </ul>
+            <img src="spurs-cat.jpg" alt="This cat has a spot on its nose that's shaped like the spurs logo" height="310" width="250">
+            <h4>References</h4>
+            <ul>
+                <li>Redditor u/spurringbanner. “My friend’s cat is totally a fan!” Reddit, r/coys, https://www.reddit.com/r/coys/comments/aentpk/my_friends_cat_is_totally_a_fan/?st=JS2U98N4&sh=d77f61ba. </li>
+            </ul>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="phone.js"></script>
+    </body>
+</html>
